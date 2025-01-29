@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dicoding Event</string>
+    <string name="title_home">Home</string>
+    <string name="title_upcoming">Upcoming</string>
+    <string name="title_finished">Finished</string>
+    <string name="quotaDetail">100</string>
+    <string name="timeDetail">24/06/01 07:30</string>
+    <string name="eventOrganizerDetail">Dicoding Event</string>
+    <string name="titleDetail">Title</string>
+    <string name="descriptionDetail">Asdf adfadsfadfdsf adfasdfasdfadfa dfadfadfasfdf</string>
+    <string name="registerDetail">Register</string>
+    <string name="hintSearch">DevCoach</string>
+</resources>

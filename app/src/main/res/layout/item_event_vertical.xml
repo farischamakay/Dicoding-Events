@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImgEvent"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    tools:src="@tools:sample/avatars" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tvTitleEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/title_finished"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cardImgEvent"
+                app:layout_constraintStart_toEndOf="@+id/cardImgEvent"/>
+
+            <ImageView
+                android:id="@+id/imgDateEvent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintStart_toEndOf="@+id/cardImgEvent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleEvent"
+                app:srcCompat="@drawable/ic_time_event" />
+
+            <TextView
+                android:id="@+id/tvDateEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/timeDetail"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/imgDateEvent"
+                app:layout_constraintStart_toEndOf="@id/imgDateEvent"
+                app:layout_constraintTop_toTopOf="@id/imgDateEvent"/>
+
+            <ImageView
+                android:id="@+id/imgQuotaEvent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintStart_toEndOf="@+id/cardImgEvent"
+                app:layout_constraintTop_toBottomOf="@+id/imgDateEvent"
+                app:srcCompat="@drawable/ic_ticket_24" />
+
+            <TextView
+                android:id="@+id/tvQuotaEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/quotaDetail"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgQuotaEvent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgQuotaEvent"
+                app:layout_constraintTop_toTopOf="@+id/imgQuotaEvent" />
+
+            <ImageView
+                android:id="@+id/imgPenyelenggaraEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintStart_toEndOf="@+id/cardImgEvent"
+                app:layout_constraintTop_toBottomOf="@+id/imgQuotaEvent"
+                app:layout_constraintBottom_toBottomOf="@id/cardImgEvent"
+                app:srcCompat="@drawable/ic_organizer_24" />
+
+            <TextView
+                android:id="@+id/tvPenyelenggaraEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/eventOrganizerDetail"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="@id/imgPenyelenggaraEvent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgPenyelenggaraEvent"
+                app:layout_constraintTop_toTopOf="@+id/imgPenyelenggaraEvent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

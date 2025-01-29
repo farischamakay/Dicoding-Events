@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.dicodingevent.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_detail"
+            app:destination="@id/navigation_detail" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_upcoming"
+            app:destination="@id/navigation_upcoming" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_finished"
+            app:destination="@id/navigation_finished" />
+        <action
+            android:id="@+id/action_navigation_home_to_searchEventFragment"
+            app:destination="@id/searchEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.example.dicodingevent.ui.detail.DetailEventFragment"
+        android:label="fragment_detail_event"
+        tools:layout="@layout/fragment_detail_event" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_upcoming"
+        android:name="com.example.dicodingevent.ui.upcoming.UpcomingEventFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_navigation_upcoming_to_navigation_detail"
+            app:destination="@id/navigation_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_finished"
+        android:name="com.example.dicodingevent.ui.finished.FinishedEventFragment"
+        android:label="fragment_finished"
+        tools:layout="@layout/fragment_finished" >
+        <action
+            android:id="@+id/action_navigation_finished_to_navigation_detail"
+            app:destination="@id/navigation_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchEventFragment"
+        android:name="com.example.dicodingevent.ui.search.SearchEventFragment"
+        android:label="fragment_search_event"
+        tools:layout="@layout/fragment_search_event" >
+        <action
+            android:id="@+id/action_searchEventFragment_to_navigation_detail"
+            app:destination="@id/navigation_detail" />
+    </fragment>
+
+</navigation>
